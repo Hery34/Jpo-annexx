@@ -201,7 +201,7 @@ export default function VisiteurForm() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <Label htmlFor="entreprise" className="text-sm font-medium">
-                Entreprise *
+                Entreprise
               </Label>
               <Input
                 id="entreprise"
@@ -209,7 +209,6 @@ export default function VisiteurForm() {
                 type="text"
                 value={formData.entreprise}
                 onChange={handleInputChange}
-                required
                 className="w-full"
                 placeholder="Nom de l'entreprise"
               />
@@ -287,7 +286,7 @@ export default function VisiteurForm() {
 
             <div className="space-y-2 md:col-span-2">
               <Label htmlFor="adresse" className="text-sm font-medium">
-                Adresse *
+                Adresse
               </Label>
               <Input
                 id="adresse"
@@ -295,7 +294,6 @@ export default function VisiteurForm() {
                 type="text"
                 value={formData.adresse}
                 onChange={handleInputChange}
-                required
                 className="w-full"
                 placeholder="Votre adresse complète"
               />
