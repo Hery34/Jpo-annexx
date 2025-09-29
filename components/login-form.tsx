@@ -53,7 +53,7 @@ export function LoginForm({
         <CardHeader>
           <CardTitle className="text-2xl">Connexion</CardTitle>
           <CardDescription>
-            Entrez l'email et le mot de passe pour vous connecter
+            Entrez l&apos;email et le mot de passe pour vous connecter
           </CardDescription>
         </CardHeader>
         <CardContent>

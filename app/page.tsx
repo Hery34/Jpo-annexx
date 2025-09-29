@@ -1,4 +1,3 @@
-import { AuthButton } from "@/components/auth-button";
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 import Image from "next/image";
@@ -37,7 +36,7 @@ export default async function Home() {
             <div className="mt-8">
               <Link href="/auth/login">
                 <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg font-semibold rounded-lg">
-                  Accéder au formulaire d'inscription
+                  Accéder au formulaire d&apos;inscription
                 </Button>
               </Link>
             </div>

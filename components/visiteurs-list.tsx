@@ -178,7 +178,7 @@ export default function VisiteursList({ visiteurs }: VisiteursListProps) {
                   <p className="text-lg">{selectedVisiteur.telephone}</p>
                 </div>
                 <div>
-                  <label className="text-sm font-medium text-gray-500">Date d'inscription</label>
+                  <label className="text-sm font-medium text-gray-500">Date d&apos;inscription</label>
                   <p className="text-lg">{formatDate(selectedVisiteur.created_at!)}</p>
                 </div>
               </div>

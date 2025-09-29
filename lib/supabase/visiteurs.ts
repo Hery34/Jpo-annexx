@@ -1,5 +1,5 @@
 import { createClient } from './client';
-import { Visiteur, VisiteurInsert } from '@/lib/types/visiteur';
+import { VisiteurInsert } from '@/lib/types/visiteur';
 
 export async function insertVisiteur(visiteur: VisiteurInsert) {
   const supabase = createClient();
