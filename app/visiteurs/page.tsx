@@ -5,6 +5,10 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 
+// Force la page à être dynamique et à récupérer les données fraîches à chaque requête
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export default async function VisiteursPage() {
   // Récupérer la liste des visiteurs
   const visiteurs = await getVisiteurs();
