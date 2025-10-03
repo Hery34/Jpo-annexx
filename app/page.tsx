@@ -1,23 +1,14 @@
-import { createClient } from "@/lib/supabase/server";
-import { redirect } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import VisiteurForm from "@/components/visiteur-form";
 
 export default async function Home() {
-  const supabase = await createClient();
-  
-  // Vérifier si l'utilisateur est connecté
-  const { data: { user } } = await supabase.auth.getUser();
-  
-  if (user) {
-    redirect("/protected");
-  }
   return (
     <main className="min-h-screen flex flex-col items-center">
       <div className="flex-1 w-full flex flex-col gap-20 items-center">
         <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16">
- 
+
         </nav>
         <div className="flex-1 flex flex-col gap-20 max-w-5xl p-5">
           <div className="flex flex-col items-center gap-8">
@@ -33,12 +24,17 @@ export default async function Home() {
               <br />
               <span className="text-2xl">03 & 04 octobre 2025</span>
             </h1>
-            <div className="mt-8">
-              <Link href="/auth/login">
-                <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg font-semibold rounded-lg">
-                  Accéder au formulaire d&apos;inscription
+
+            <div className="flex gap-4 mt-4">
+              <Link href="/visiteurs">
+                <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-50 px-6 py-3 text-lg font-semibold rounded-lg">
+                  Voir les inscrits
                 </Button>
               </Link>
+            </div>
+
+            <div className="w-full mt-8">
+              <VisiteurForm />
             </div>
           </div>
         </div>
